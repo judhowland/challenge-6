@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Challenge-6</title>
 </head>
-<body>
+
+<body class="flex-column mw-100">
+    <header class="hero">
+        <div class="bg-dark text-white text-center container">
+            <h1 class="display-4">Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="row flex-row justify-space-between">
+        <!-- Left side of homepage -->
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <h4 class="card-header">Search for a City:</h4>
+                <div class="input-group">
+                    <input class="form-control" name="search" type="text" id="city-name"><span> <button type="submit"
+                            class="btn btn-primary" id="city-search-button"><i class="fa fa-search"></i></button></span>
+                </div>
+                <ul id="previous-cities"></ul>
+            </div>
+        </div>
+
+        <!-- Right side of homepage -->
+        <div class="col-12 col-md-8">
+            <div>
+                <div class="col-12 col-md-12">
+                    <h3 id="city-name-display"></h3><img id="today-icon"></img>
+                </div>
+                <p>Temperature: <span id="today-temp"></span></p>
+                <p>Humidity: <span id="today-humidity"></span></p>
+                <p>Wind Speed: <span id="today-wind-speed"></span></p>
+                <p>UV Index: <span id="today-uv-index"></span></p>
+            </div>
+            <div class="row justify-space-between">
+                <h4 class="col-12 col-md-12">5-Day Forecast:</h4>
+                <div id="forecast-section" class="row mt-3">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
