@@ -93,7 +93,7 @@ function getForecastWeather(cityName) {
 function displayForecastWeather(data) {
     for (var i=0; i < data.list.length; i++) {
         if (data.list[i].dt_txt.indexOf("12:00:00") !== -1) {
-            var forecastCard = $("<div>").addClass("col-sm-12 col-md-2 text-white bg-primary m-2 p-2");
+            var forecastCard = $("<div>").addClass("col-md-12 col-lg-2 text-white bg-primary m-2 p-2");
             var forecastDate = $("<h6>").text(new Date(data.list[i].dt_txt).toLocaleDateString('en-US'));
             var forecastIcon = $("<img>").attr("src", ("https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"));
             var forecastTemp = $("<p>").addClass("font-weight-lighter").text("Temp: " + data.list[i].main.temp_max + " °F");
