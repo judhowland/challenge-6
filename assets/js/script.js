@@ -44,7 +44,7 @@ function getUvIndex (data) {
     var cityLat = data.coord.lat;
     var cityLon = data.coord.lon;
                    
-    var uvApi = fetch("http://api.openweathermap.org/data/2.5/uvi?appid=d4b74d5339d458e26b64aecdf7a1e8c0&lat=" + cityLat +"&lon=" + cityLon)
+    var uvApi = fetch("https://api.openweathermap.org/data/2.5/uvi?appid=d4b74d5339d458e26b64aecdf7a1e8c0&lat=" + cityLat +"&lon=" + cityLon)
         .then(function(response) {
             if (response.ok) {
                 response.json().then(function(data) {
