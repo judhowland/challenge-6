@@ -11,11 +11,9 @@
     <title>Challenge-6</title>
 </head>
 
-<body class="flex-column mw-100">
-    <header class="hero">
-        <div class="bg-dark text-white text-center container">
-            <h1 class="display-4">Weather Dashboard</h1>
-        </div>
+<body>
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
     </header>
 
     <main class="row flex-row justify-space-between">
@@ -32,19 +30,18 @@
         </div>
 
         <!-- Right side of homepage -->
-        <div class="col-12 col-md-8">
+        <div class="container-fluid col-sm-12 col-md-8">
             <div>
-                <div class="col-12 col-md-12">
-                    <h3 id="city-name-display"></h3><img id="today-icon"></img>
-                </div>
-                <p>Temperature: <span id="today-temp"></span></p>
+                <div id="city-name-display" class="col-sm-12 col-md-12"></div>
+                <div id="city-weather-data" class="col-sm-12 col-md-12">
+                <!-- <p>Temperature: <span id="today-temp"></span></p>
                 <p>Humidity: <span id="today-humidity"></span></p>
                 <p>Wind Speed: <span id="today-wind-speed"></span></p>
-                <p>UV Index: <span id="today-uv-index"></span></p>
+                <p>UV Index: <span id="today-uv-index"></span></p> 
+                -->
             </div>
-            <div class="row justify-space-between">
-                <h4 class="col-12 col-md-12">5-Day Forecast:</h4>
-                <div id="forecast-section" class="row mt-3">
+            <div id="forecast-title" class="row justify-space-between">
+                <div id="forecast-section" class="row m-2 p-1">
                 </div>
             </div>
         </div>
