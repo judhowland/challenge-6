@@ -22,7 +22,7 @@ function getTodayWeather(cityName) {
             if (response.ok) {
                 response.json().then(function (data) {
                     
-                    var iconApi = ("http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png");
+                    var iconApi = ("https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png");
 
                     var cityTitle = $("<h3>").text(cityName + " (" + new Date().toLocaleDateString() + ")");
                     var todayIcon = $("<img>").attr("src", iconApi);
@@ -95,7 +95,7 @@ function displayForecastWeather(data) {
         if (data.list[i].dt_txt.indexOf("12:00:00") !== -1) {
             var forecastCard = $("<div>").addClass("col-sm-12 col-md-2 text-white bg-primary m-2 p-2");
             var forecastDate = $("<h6>").text(new Date(data.list[i].dt_txt).toLocaleDateString());
-            var forecastIcon = $("<img>").attr("src", ("http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"));
+            var forecastIcon = $("<img>").attr("src", ("https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"));
             var forecastTemp = $("<p>").addClass("font-weight-lighter").text("Temp: " + data.list[i].main.temp_max + " °F");
             var forecastHumidity = $("<p>").addClass("font-weight-lighter").text("Humidity: " + data.list[i].main.humidity + "%");
 
